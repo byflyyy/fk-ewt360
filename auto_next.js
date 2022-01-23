@@ -1,0 +1,24 @@
+// 辅助脚本 实现课程切换
+var i = 0
+while(true){
+    var end = textContains("00:00").exists();
+    if(end){
+        next();
+    //shell('am start -n org.autojs.autojs/.external.open.RunIntentActivity -d /storage/emulated/0/Code/ewt-maths-1.js  -t application/x-javascript',true)
+    //break  //更改 实现脚本调用
+}
+    var test = textContains("答题卡").exists();
+    if (test){
+        i = i + 1
+        next();
+    }
+}
+
+function next(){
+    back()
+    sleep(3000)
+    click("未完成",i)   //更改
+    log("NEXT")
+    log("累计跳过",i,"个试卷")
+    sleep(10000);
+}
